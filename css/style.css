@@ -511,6 +511,30 @@ main p + p {
   ); /*文字色。css冒頭で指定しているprimary-colorを読み込みます*/
 }
 
+.box {
+  cursor: pointer;
+  height: 200px;
+  margin-inline: auto;
+  margin-top: 20px;
+  position: relative;
+  width: 326px;
+}
+.box img {
+  height: auto;
+  left: 0;
+  position: absolute;
+  width: 100%;
+}
+/* 2枚目の画像は最初透明 */
+.box img:last-of-type {
+  opacity: 0;
+  transition: opacity 0.7s;
+}
+/* hoverすると2枚目の画像が透明じゃなくなる */
+.box:hover img {
+  opacity: 1;
+}
+
 /*box1設定（このテンプレートでは、2カラム時のsubブロックでのみ使用しています）
 ---------------------------------------------------------------------------*/
 /*ボックス全体の設定*/
